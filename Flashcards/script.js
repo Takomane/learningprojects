@@ -129,7 +129,7 @@ iterate("0");
 
 // Next
 const next = document.getElementsByClassName('next')[0];
-let id = 0;
+let id = Questions[Math.floor(Math.random() * Questions.length)]
 
 next.addEventListener("click", () => {
 start = false;
