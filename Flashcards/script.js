@@ -133,9 +133,8 @@ let id = Questions[Math.floor(Math.random() * Questions.length)]
 
 next.addEventListener("click", () => {
 start = false;
-if (id < 4) {
+if (id < max) {
 id++;
 iterate(id);
-console.log(id);
 }
 })
