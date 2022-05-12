@@ -39,6 +39,9 @@ let start = true;
 // Iterate
 function iterate(id) {
 
+// Get question
+let id = Math.floor(Math.random() * (max - min + 1)) + min;
+
 // Getting the result display section
 let result = document.getElementsByClassName("result");
 result[0].innerText = "";
@@ -123,12 +126,10 @@ iterate("0");
 
 // Next
 const next = document.getElementsByClassName('next')[0];
-let max = questions.length - 1;
+let max = Questions.length - 1;
 let min = 0;
-let id = Math.floor(Math.random() * (max - min + 1)) + min;
 
 next.addEventListener("click", () => {
 start = false;
 id++;
-iterate(id);
 })
