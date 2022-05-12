@@ -43,7 +43,7 @@ let start = true;
 // Iterate
 function iterate(id) {
 
-// Getting the result display section
+// result display section
 let result = document.getElementsByClassName("result");
 result[0].innerText = "";
 
@@ -52,23 +52,23 @@ const question = document.getElementById("question");
 let max = Questions.length - 1;
 let min = 0;
 
-// Setting the question text
+//question text
 question.innerText = Questions[id].q;
 
-// Getting the options
+// options
 const op1 = document.getElementById('option1');
 const op2 = document.getElementById('option2');
 const op3 = document.getElementById('option3');
 const op4 = document.getElementById('option4');
 
 
-// Providing option text 
+//option text 
 op1.innerText = Questions[id].a[0].text;
 op2.innerText = Questions[id].a[1].text;
 op3.innerText = Questions[id].a[2].text;
 op4.innerText = Questions[id].a[3].text;
 
-// Providing the true or false value to the options
+// true or false value to the options
 op1.value = Questions[id].a[0].isCorrect;
 op2.value = Questions[id].a[1].isCorrect;
 op3.value = Questions[id].a[2].isCorrect;
