@@ -1,5 +1,6 @@
 // Questions will be asked
  const Questions = [{
+     id: 0,
     q: "Inside which HTML Element do we put the Javascript?",
     a: [{ text: "<link>", isCorrect: false },
         { text: "<script>", isCorrect: true },
@@ -8,6 +9,7 @@
     ]
 },
 {
+    id: 1,
     q: "How do you create a function?",
     a: [{ text: "function:myFunction()", isCorrect: false },
         { text: "function myFunction()", isCorrect: true },
@@ -16,6 +18,7 @@
     ]
 },
 {
+    id: 2,
     q: "How do you write a conditional statement for executing some statements on if i is equal to 5?",
     a: [{ text: "if i==5 then true", isCorrect: false },
         { text: "if (i+=5)", isCorrect: false },
@@ -24,6 +27,7 @@
     ]
 },
 {
+    id: 3,
     q: "How does a for loop start?",
     a: [{ text: "for (i=0; i<=5)", isCorrect: false },
         { text: "for (i=0;i<=5;i++)", isCorrect: false },
@@ -39,15 +43,14 @@ let start = true;
 // Iterate
 function iterate(id) {
 
-// Get question
-let id = Math.floor(Math.random() * (max - min + 1)) + min;
-
 // Getting the result display section
 let result = document.getElementsByClassName("result");
 result[0].innerText = "";
 
 // Getting the question
 const question = document.getElementById("question");
+let max = Questions.length - 1;
+let min = 0;
 
 // Setting the question text
 question.innerText = Questions[id].q;
@@ -126,10 +129,13 @@ iterate("0");
 
 // Next
 const next = document.getElementsByClassName('next')[0];
-let max = Questions.length - 1;
-let min = 0;
+let id = 0;
 
 next.addEventListener("click", () => {
 start = false;
+if (id < Math.floor(Math.random) * Questions.length) {
 id++;
+iterate(id);
+console.log(id);
+}
 })
