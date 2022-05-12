@@ -40,6 +40,10 @@
 // Set start
 let start = true;
 
+//setting max and min
+let max = Questions.length - 1;
+let min = 0;
+
 // Iterate
 function iterate(id) {
 
@@ -49,8 +53,7 @@ result[0].innerText = "";
 
 // Getting the question
 const question = document.getElementById("question");
-let max = Questions.length - 1;
-let min = 0;
+
 
 //question text
 question.innerText = Questions[id].q;
