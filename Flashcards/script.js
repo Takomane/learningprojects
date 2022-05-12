@@ -46,10 +46,6 @@ result[0].innerText = "";
 // Getting the question
 const question = document.getElementById("question");
 
-//randomize questions
-let max = questions.length - 1;
-let min = 0;
-
 // Setting the question text
 question.innerText = Questions[id].q;
 
@@ -127,6 +123,8 @@ iterate("0");
 
 // Next
 const next = document.getElementsByClassName('next')[0];
+let max = questions.length - 1;
+let min = 0;
 let id = Math.floor(Math.random() * (max - min + 1)) + min;
 
 next.addEventListener("click", () => {
