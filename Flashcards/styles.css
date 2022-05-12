@@ -65,7 +65,7 @@ body{
     background-color:#784286;
 }
   
-.answer,.next,.previous{
+.answer,.next{
     width:8vw;
     height: 6vh;
     padding: 2px;
@@ -86,12 +86,5 @@ body{
     border-radius: 25%;
 }
 .next:hover{
-    background-color: #b80e65;
-}
-.previous{
-    background-color: #1791b1;
-    border-radius: 25%;
-}
-.previous:hover{
     background-color: #b80e65;
 }
