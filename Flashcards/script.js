@@ -1,6 +1,6 @@
 // Questions will be asked
-const Questions = [{
-    id: 0,
+let Questions = [{
+
     q: "Inside which HTML Element do we put the Javascript?",
     a: [{ text: "<link>", isCorrect: false },
         { text: "<script>", isCorrect: true },
@@ -10,7 +10,7 @@ const Questions = [{
 
 },
 {
-    id: 1,
+
     q: "How do you create a function?",
     a: [{ text: "function:myFunction()", isCorrect: false },
         { text: "function myFunction()", isCorrect: true },
@@ -20,7 +20,7 @@ const Questions = [{
 
 },
 {
-    id: 2,
+
     q: "How do you write a conditional statement for executing some statements on if i is equal to 5?",
     a: [{ text: "if i==5 then true", isCorrect: false },
         { text: "if (i+=5)", isCorrect: false },
@@ -30,7 +30,7 @@ const Questions = [{
 
 },
 {
-    id: 3,
+
     q: "How does a for loop start?",
     a: [{ text: "for (i=0; i<=5)", isCorrect: false },
         { text: "for (i=0;i<=5;i++)", isCorrect: false },
@@ -53,6 +53,7 @@ result[0].innerText = "";
 
 // Getting the question
 const question = document.getElementById("question");
+
 
 // Setting the question text
 question.innerText = Questions[id].q;
@@ -78,7 +79,7 @@ op4.value = Questions[id].a[3].isCorrect;
 
 let selected = "";
 
-// Show selection for op1
+// what happens when you press the answer
 op1.addEventListener("click", () => {
     op1.style.backgroundColor = "#1791b1";
     op2.style.backgroundColor = "#b80e65";
@@ -87,7 +88,6 @@ op1.addEventListener("click", () => {
     selected = op1.value;
 })
 
-// Show selection for op2
 op2.addEventListener("click", () => {
     op1.style.backgroundColor = "#b80e65";
     op2.style.backgroundColor = "#1791b1";
@@ -96,7 +96,6 @@ op2.addEventListener("click", () => {
     selected = op2.value;
 })
 
-// Show selection for op3
 op3.addEventListener("click", () => {
     op1.style.backgroundColor = "#b80e65";
     op2.style.backgroundColor = "#b80e65";
@@ -105,7 +104,6 @@ op3.addEventListener("click", () => {
     selected = op3.value;
 })
 
-// Show selection for op4
 op4.addEventListener("click", () => {
     op1.style.backgroundColor = "#b80e65";
     op2.style.backgroundColor = "#b80e65";
@@ -114,10 +112,9 @@ op4.addEventListener("click", () => {
     selected = op4.value;
 })
 
-// Grabbing the evaluate button
+//evaluate
 const evaluate = document.getElementsByClassName("answer");
 
-// Evaluate method
 evaluate[0].addEventListener("click", () => {
     if (selected == "true") {
         result[0].innerHTML = "Correct! You smarty pants ;^)";
@@ -133,15 +130,15 @@ if (start) {
 iterate("0");
 }
 
-// Next button and method
+// Next
 const next = document.getElementsByClassName('next')[0];
 let id = 0;
 
 next.addEventListener("click", () => {
 start = false;
- if (id < 3) { //sets the amount of questions. As you add more questions be sure to add the highest id number here
-    id++;
-    iterate(id); 
-    console.log(id);
- }
+let max = questions.length - 1;
+let min = 0;
+question = Math.floor(Math.random() * (max - min + 1)) + min;
+id++;
+iterate(id);
 })
