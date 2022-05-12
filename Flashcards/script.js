@@ -1,4 +1,4 @@
-// Questions will be asked
+// Questions
  const Questions = [{
      id: 0,
     q: "Inside which HTML Element do we put the Javascript?",
