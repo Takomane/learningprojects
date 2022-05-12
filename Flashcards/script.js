@@ -129,11 +129,11 @@ iterate("0");
 
 // Next
 const next = document.getElementsByClassName('next')[0];
-let id = 0;
+let id = Math.floor(Math.random) * 4 -1;
 
 next.addEventListener("click", () => {
 start = false;
-if (id < Math.floor(Math.random) * Questions.length) {
+if (id < 4) {
 id++;
 iterate(id);
 console.log(id);
