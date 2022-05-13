@@ -40,6 +40,10 @@
 // Set start
 let start = true;
 
+//setting max and min
+let max = Questions.length - 1;
+let min = 0;
+
 // Iterate
 function iterate(id) {
 
@@ -49,24 +53,13 @@ result[0].innerText = "";
 
 // Getting the question
 const question = document.getElementById("question");
-let max = Questions.length - 1;
-let min = 0;
 
 //question text
 question.innerText = Questions[id].q;
 
-// options
-const op1 = document.getElementById('option1');
-const op2 = document.getElementById('option2');
-const op3 = document.getElementById('option3');
-const op4 = document.getElementById('option4');
-
-
-//option text 
-op1.innerText = Questions[id].a[0].text;
-op2.innerText = Questions[id].a[1].text;
-op3.innerText = Questions[id].a[2].text;
-op4.innerText = Questions[id].a[3].text;
+for (let i = 0; i < Questions[id].a.length; i++) {
+    document.getElementById('option' + (i + 1)).innerText = Questions[id].a[i].text
+}
 
 // true or false value to the options
 op1.value = Questions[id].a[0].isCorrect;
@@ -124,7 +117,7 @@ evaluate[0].addEventListener("click", () => {
 }
 
 if (start) {
-iterate("0");
+iterate(0);
 }
 
 // Next
@@ -133,9 +126,7 @@ let id = Questions[Math.floor(Math.random() * Questions.length)]
 
 next.addEventListener("click", () => {
 start = false;
-if (id < 4) {
 id++;
 iterate(id);
-console.log(id);
 }
-})
+)
