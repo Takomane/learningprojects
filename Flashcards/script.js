@@ -54,15 +54,11 @@ result[0].innerText = "";
 // Getting the question
 const question = document.getElementById("question");
 
-
 //question text
 question.innerText = Questions[id].q;
 
 for (let i = 0; i < Questions[id].a.length; i++) {
-    console.log("loop");
     document.getElementById('option' + (i + 1)).innerText = Questions[id].a[i].text
-    console.log(Questions[id].a[i].text);
-    console.log('option' + (i + 1));
 }
 
 // true or false value to the options
