@@ -32,6 +32,53 @@ return a.slice(3);
 function myFunction(str){
 return str.slice(-3)
 }
+// Write a function that takes a string (a) as argument
+// Get the first 3 characters of a
+// Return the result
+function myFunction(a){
+return a.slice(0,3)
+}
+// Write a function that takes a string (a) as argument
+// Extract the first half a
+// Return the result
+function myFunction(a){
+return a.slice(0, a.length /2)
+}
+// Write a function that takes a string (a) as argument
+// Remove the last 3 characters of a
+// Return the result
+function myFunction(a){
+return a.slice(0, -3);
+}
+// Write a function that takes two numbers (a and b) as argument
+// Return b percent of a
+function myFunction(a, b){
+return (a/100)*b
+}
+// Write a function that takes 6 values (a,b,c,d,e,f) as arguments
+// Sum a and b, Then substract by c, Then multiply by d and divide by e, Finally raise to the power of f and return the result
+// Tipp: mind the order
+function myFunction(a, b, c, d, e, f){
+return (((((a+b)-c)*d)/e)**f)
+}
+// Write a function that takes a number as argument
+// If the number is even, return true
+// Otherwise, return false
+function myFunction(a){
+return a % 2 === 0
+}
+// Write a function that takes two strings (a and b) as arguments
+// Return the number of times a occurs in b
+function myFunction(a, b){
+return (b.split(a).length-1)
+}
+// Write a function that takes a number (a) as argument
+// If a is a whole number (has no decimal place), return true
+// Otherwise, return false
+function myFunction(a){
+return a - Math.floor(a) === 0
+}
+
 //JAVASCRIPT ARRAYS
 // Write a function that takes an array (a) and a value (n) as argument
 // Return the nth element of 'a'
